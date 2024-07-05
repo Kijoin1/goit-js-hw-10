@@ -5,8 +5,6 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +20,179 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+/* ------------- Task 1 ------------- */
+* {
+font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #2e2f42;
+}
+
+.input-and-button {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: row;
+gap: 8px;
+
+padding-bottom: 32px;
+}
+
+.timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+  }
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.value {
+  font-size: 40px;
+}
+
+#datetime-picker {
+  padding-left: 16px;
+  border-radius: 4px;
+  width: 272px;
+  height: 37px;
+  border: 1px solid #808080;
+}
+
+#datetime-picker:hover {
+  border: 1px solid #000;
+}
+
+#datetime-picker:active {
+  border: 1px solid #4e75ff;
+}
+
+.input-and-button #datetime-picker[disabled] {
+  background: #fafafa;
+  color: #808080;
+}
+
+
+.input-and-button button {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+gap: 10px;
+
+border-radius: 8px;
+padding: 8px 16px;
+width: 75px;
+height: 40px;
+
+background: #4e75ff;
+
+color: #fff;
+font-weight: 500;
+border: none;
+}
+
+.input-and-button button:hover {
+background: #6c8cff;
+}
+
+.input-and-button button[disabled] {
+  color: #989898;
+  background: #cfcfcf;
+}
+
+/* ------------- Task 2 ------------- */
+
+form {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+width: 360px;
+}
+
+.inputMS {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+gap: 8px;
+
+width: 360px;
+height: 72px;
+}
+
+.inputMS input {
+border-radius: 4px;
+border: 1px solid #808080;
+
+width: 360px;
+height: 40px;
+}
+
+.inputMS input:hover {
+border: 1px solid #000;
+}
+
+form fieldset {
+width: 340px;
+border-radius: 4px;
+stroke-width: 1px;
+stroke: #808080;
+}
+
+.fieldset-and-button {
+align-items: center;
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+}
+
+fieldset {
+margin: 0;
+margin-bottom: 24px;
+}
+
+fieldset div {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: row;
+gap: 48px;
+
+padding: 16px 0px 8px 0px;
+}
+
+form button {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+gap: 10px;
+
+border-radius: 8px;
+padding: 8px 16px;
+width: 360px;
+height: 40px;
+
+background: #4e75ff;
+
+font-weight: 500;
+color: #fff;
+border: none;
+}
+
+form button:hover {
+background: #6c8cff;
 }
