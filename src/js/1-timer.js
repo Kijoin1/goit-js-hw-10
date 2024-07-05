@@ -11,7 +11,7 @@ const refs = {
   minutes: document.querySelector('[data-minutes]'),
   seconds: document.querySelector('[data-seconds]'),
 };
-
+refs.button.setAttribute('disabled', '');
 let userSelectedDate;
 let dataInterval;
 
@@ -41,17 +41,17 @@ const options = {
 
 flatpickr('#datetime-picker', options);
 
+
 refs.button.addEventListener('click', startTimer)
 
 function startTimer() {
 
 const timeClick = Date.now()
-refs.button.setAttribute('disabled', '');
-refs.input.setAttribute('disabled', '');
 
+refs.input.setAttribute('disabled', '');
+refs.button.setAttribute('disabled', '');
 
 dataInterval = userSelectedDate - timeClick
-console.log(dataInterval)
 
 let interval = setInterval(()=>{
 const time = convertMs(dataInterval);
@@ -66,6 +66,7 @@ refs.seconds.textContent = str.dataSeconds
 if (dataInterval <= 0) {
     clearInterval(interval);
   refs.input.removeAttribute('disabled');
+  refs.button.setAttribute('disabled', '');
 
   userSelectedDate = null;
   dataInterval = null;
