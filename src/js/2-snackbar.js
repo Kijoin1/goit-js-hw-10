@@ -34,7 +34,7 @@ function fulfilled(delay) {
 return iziToast.show({
     color: 'blue',
     title: `✅ Fulfilled promise in ${delay}ms`,
-    image: '../img/water_cat.jpg',
+    image: '/src/img/water_cat.jpg',
     titleColor: 'black',
 });
 }
@@ -43,7 +43,7 @@ function rejected(delay){
 return iziToast.show({
     color: 'red',
     title: `❌ Rejected promise in ${delay}ms`,
-    image: '../img/fire_cat.jpg',
+    image: '/src/img/fire_cat.jpg',
     titleColor: 'black',
 });
 }

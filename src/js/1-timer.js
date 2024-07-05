@@ -26,7 +26,7 @@ const options = {
       iziToast.show({
         color: 'red',
         title: 'Please choose a date in the future',
-        image: '../img/cat.jpg',
+        image: '/src/img/cat.jpg',
         titleColor: 'black',
       });
       refs.button.disabled = true;
